@@ -1,0 +1,25 @@
+_id: req_785644db1a494942837956119ebcb3ab
+type: Request
+parentId: fld_7b4570d8419c4c4487137f4b12116745
+modified: 1693889475617
+created: 1693889475617
+url: "{{backend_host}}{{backend_v1}}/users/2/authorization"
+name: Get User Authorization
+description: ""
+method: GET
+body: {}
+parameters: []
+headers: []
+authentication:
+  type: bearer
+  disabled: false
+  token: "{{jwt_token}}"
+  prefix: ""
+metaSortKey: -1693889475617
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

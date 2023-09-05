@@ -1,0 +1,31 @@
+_id: req_88d14ac127fc44e380a8c169768055ea
+type: Request
+parentId: fld_ba467b663a5c43879b8a20a3f4d3a043
+modified: 1693889475604
+created: 1693889475604
+url: "{{backend_host}}{{backend_v1}}/users/1/avatars"
+name: CreateUserAvatar
+description: ""
+method: POST
+body:
+  params:
+    - type: file
+      name: image
+      disabled: false
+      fileName: /home/hcastellanos/Downloads/WallpaperDog-10803466.jpg
+  mimeType: multipart/form-data
+parameters: []
+headers: []
+authentication:
+  type: bearer
+  disabled: false
+  token: "{{jwt_token}}"
+  prefix: ""
+metaSortKey: -1693889475604
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

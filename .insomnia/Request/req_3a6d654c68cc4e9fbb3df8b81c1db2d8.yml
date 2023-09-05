@@ -1,0 +1,25 @@
+_id: req_3a6d654c68cc4e9fbb3df8b81c1db2d8
+type: Request
+parentId: fld_afb1f8d16f204cfdbc3406b3b60686b0
+modified: 1693889475600
+created: 1693889475600
+url: "{{backend_host}}{{backend_v1}}/users/1"
+name: GetUser
+description: ""
+method: GET
+body: {}
+parameters: []
+headers: []
+authentication:
+  type: bearer
+  disabled: false
+  token: "{{jwt_token}}"
+  prefix: ""
+metaSortKey: -1693889475600
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

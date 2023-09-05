@@ -1,0 +1,1516 @@
+_id: spc_120901039ab2445cb7c550c136a0a122
+type: ApiSpec
+parentId: wrk_4e73721c85f8432abaf4d9a4b30d02f1
+modified: 1693889402353
+created: 1693889168530
+fileName: insomnia_smart.git
+contents: >-
+  {
+  	"info": {
+  		"_postman_id": "ebaff388-9c97-4646-87eb-3a47006601c3",
+  		"name": "smart_webapp",
+  		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+  		"_exporter_id": "26663744"
+  	},
+  	"item": [
+  		{
+  			"name": "backend",
+  			"item": [
+  				{
+  					"name": "Authentication",
+  					"item": [
+  						{
+  							"name": "Login",
+  							"request": {
+  								"method": "POST",
+  								"header": [],
+  								"body": {
+  									"mode": "raw",
+  									"raw": "{\n   \"user_name\":\"Admin\",\n    \"password\":\"P@ssword1\" \n}",
+  									"options": {
+  										"raw": {
+  											"language": "json"
+  										}
+  									}
+  								},
+  								"url": {
+  									"raw": "{{backend_host}}{{backend_v1}}/login",
+  									"host": [
+  										"{{backend_host}}{{backend_v1}}"
+  									],
+  									"path": [
+  										"login"
+  									]
+  								}
+  							},
+  							"response": []
+  						},
+  						{
+  							"name": "RefreshToken",
+  							"request": {
+  								"method": "POST",
+  								"header": [],
+  								"body": {
+  									"mode": "raw",
+  									"raw": "{\n    \"refresh_token\":\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImV4cCI6MTY5MjM4MDY1M30.tTVWBvspiVfFYawudbrkBrxKXJwiHV3_-bMSJIP14wE\"\n}",
+  									"options": {
+  										"raw": {
+  											"language": "json"
+  										}
+  									}
+  								},
+  								"url": {
+  									"raw": "{{backend_host}}{{backend_v1}}/refresh-token",
+  									"host": [
+  										"{{backend_host}}{{backend_v1}}"
+  									],
+  									"path": [
+  										"refresh-token"
+  									]
+  								}
+  							},
+  							"response": []
+  						},
+  						{
+  							"name": "Signout",
+  							"request": {
+  								"auth": {
+  									"type": "bearer",
+  									"bearer": [
+  										{
+  											"key": "token",
+  											"value": "{{jwt_token}}",
+  											"type": "string"
+  										}
+  									]
+  								},
+  								"method": "POST",
+  								"header": [],
+  								"body": {
+  									"mode": "raw",
+  									"raw": "{\n    \"refresh_token\":\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImV4cCI6MTY5MjM3MzIwNH0.L8gLD9kKUhSbm0tv_QqIjKsTLpFcJda22JiA3aWT8Bk\"\n}",
+  									"options": {
+  										"raw": {
+  											"language": "json"
+  										}
+  									}
+  								},
+  								"url": {
+  									"raw": "{{backend_host}}{{backend_v1}}/logout",
+  									"host": [
+  										"{{backend_host}}{{backend_v1}}"
+  									],
+  									"path": [
+  										"logout"
+  									]
+  								}
+  							},
+  							"response": []
+  						}
+  					]
+  				},
+  				{
+  					"name": "User",
+  					"item": [
+  						{
+  							"name": "CreateUser",
+  							"request": {
+  								"auth": {
+  									"type": "bearer",
+  									"bearer": [
+  										{
+  											"key": "token",
+  											"value": "",
+  											"type": "string"
+  										}
+  									]
+  								},
+  								"method": "POST",
+  								"header": [
+  									{
+  										"key": "Authorization",
+  										"value": "Bearer {{jwt_token}}",
+  										"type": "text"
+  									}
+  								],
+  								"body": {
+  									"mode": "raw",
+  									"raw": "{\n    \"user_name\":\"testUser@2\",\n    \"email\":\"test2@speednet-wireless.com\",\n    \"first_name\":\"Hector\",\n    \"last_name\":\"Castellanos\",\n    \"password\":\"P@ssword1\",\n    \"confirm_password\":\"P@ssword1\"\n}",
+  									"options": {
+  										"raw": {
+  											"language": "json"
+  										}
+  									}
+  								},
+  								"url": {
+  									"raw": "{{backend_host}}{{backend_v1}}/users",
+  									"host": [
+  										"{{backend_host}}{{backend_v1}}"
+  									],
+  									"path": [
+  										"users"
+  									]
+  								}
+  							},
+  							"response": []
+  						},
+  						{
+  							"name": "Delete User",
+  							"request": {
+  								"auth": {
+  									"type": "bearer",
+  									"bearer": [
+  										{
+  											"key": "token",
+  											"value": "{{jwt_token}}",
+  											"type": "string"
+  										}
+  									]
+  								},
+  								"method": "DELETE",
+  								"header": [],
+  								"url": {
+  									"raw": "{{backend_host}}{{backend_v1}}/users/4",
+  									"host": [
+  										"{{backend_host}}{{backend_v1}}"
+  									],
+  									"path": [
+  										"users",
+  										"4"
+  									]
+  								}
+  							},
+  							"response": []
+  						},
+  						{
+  							"name": "Update User",
+  							"request": {
+  								"method": "PATCH",
+  								"header": [
+  									{
+  										"key": "Authorization",
+  										"value": "Bearer {{jwt_token}}",
+  										"type": "text"
+  									}
+  								],
+  								"body": {
+  									"mode": "raw",
+  									"raw": "{\n    \"user_name\":\"Admin\",\n    \"middle_name\":\"11\"\n}",
+  									"options": {
+  										"raw": {
+  											"language": "json"
+  										}
+  									}
+  								},
+  								"url": {
+  									"raw": "{{backend_host}}{{backend_v1}}/users/1",
+  									"host": [
+  										"{{backend_host}}{{backend_v1}}"
+  									],
+  									"path": [
+  										"users",
+  										"1"
+  									]
+  								}
+  							},
+  							"response": []
+  						},
+  						{
+  							"name": "GetUser",
+  							"request": {
+  								"auth": {
+  									"type": "bearer",
+  									"bearer": [
+  										{
+  											"key": "token",
+  											"value": "{{jwt_token}}",
+  											"type": "string"
+  										}
+  									]
+  								},
+  								"method": "GET",
+  								"header": [],
+  								"url": {
+  									"raw": "{{backend_host}}{{backend_v1}}/users/1",
+  									"host": [
+  										"{{backend_host}}{{backend_v1}}"
+  									],
+  									"path": [
+  										"users",
+  										"1"
+  									]
+  								}
+  							},
+  							"response": []
+  						},
+  						{
+  							"name": "GetUsers",
+  							"request": {
+  								"auth": {
+  									"type": "bearer",
+  									"bearer": [
+  										{
+  											"key": "token",
+  											"value": "{{jwt_token}}",
+  											"type": "string"
+  										}
+  									]
+  								},
+  								"method": "GET",
+  								"header": [],
+  								"url": {
+  									"raw": "{{backend_host}}{{backend_v1}}/users",
+  									"host": [
+  										"{{backend_host}}{{backend_v1}}"
+  									],
+  									"path": [
+  										"users"
+  									]
+  								}
+  							},
+  							"response": []
+  						},
+  						{
+  							"name": "Myself",
+  							"request": {
+  								"auth": {
+  									"type": "bearer",
+  									"bearer": [
+  										{
+  											"key": "token",
+  											"value": "{{jwt_token}}",
+  											"type": "string"
+  										}
+  									]
+  								},
+  								"method": "GET",
+  								"header": [],
+  								"url": {
+  									"raw": "{{backend_host}}{{backend_v1}}/users/myself",
+  									"host": [
+  										"{{backend_host}}{{backend_v1}}"
+  									],
+  									"path": [
+  										"users",
+  										"myself"
+  									]
+  								}
+  							},
+  							"response": []
+  						},
+  						{
+  							"name": "VerifyEmail",
+  							"request": {
+  								"method": "POST",
+  								"header": [],
+  								"url": {
+  									"raw": "{{backend_host}}{{backend_v1}}/verify-email/R3lUaDJhejU5UE12MGZYSmF5MVI1M00wYmtHUVV4SmpTUjRoMVE2U1R3Slh6bmpsUWY=",
+  									"host": [
+  										"{{backend_host}}{{backend_v1}}"
+  									],
+  									"path": [
+  										"verify-email",
+  										"R3lUaDJhejU5UE12MGZYSmF5MVI1M00wYmtHUVV4SmpTUjRoMVE2U1R3Slh6bmpsUWY="
+  									]
+  								}
+  							},
+  							"response": []
+  						},
+  						{
+  							"name": "Update Myself",
+  							"request": {
+  								"auth": {
+  									"type": "bearer",
+  									"bearer": [
+  										{
+  											"key": "token",
+  											"value": "{{jwt_token}}",
+  											"type": "string"
+  										}
+  									]
+  								},
+  								"method": "PATCH",
+  								"header": [],
+  								"body": {
+  									"mode": "raw",
+  									"raw": "{\n    \"user_name\":\"Admin1\",\n    \"middle_name\": \"a\"\n}",
+  									"options": {
+  										"raw": {
+  											"language": "json"
+  										}
+  									}
+  								},
+  								"url": {
+  									"raw": "{{backend_host}}{{backend_v1}}/users/myself",
+  									"host": [
+  										"{{backend_host}}{{backend_v1}}"
+  									],
+  									"path": [
+  										"users",
+  										"myself"
+  									]
+  								}
+  							},
+  							"response": []
+  						}
+  					]
+  				},
+  				{
+  					"name": "UserAvatar",
+  					"item": [
+  						{
+  							"name": "CreateUserAvatar",
+  							"request": {
+  								"auth": {
+  									"type": "bearer",
+  									"bearer": [
+  										{
+  											"key": "token",
+  											"value": "{{jwt_token}}",
+  											"type": "string"
+  										}
+  									]
+  								},
+  								"method": "POST",
+  								"header": [],
+  								"body": {
+  									"mode": "formdata",
+  									"formdata": [
+  										{
+  											"key": "image",
+  											"type": "file",
+  											"src": "/home/hcastellanos/Downloads/WallpaperDog-10803466.jpg"
+  										}
+  									]
+  								},
+  								"url": {
+  									"raw": "{{backend_host}}{{backend_v1}}/users/1/avatars",
+  									"host": [
+  										"{{backend_host}}{{backend_v1}}"
+  									],
+  									"path": [
+  										"users",
+  										"1",
+  										"avatars"
+  									]
+  								}
+  							},
+  							"response": []
+  						},
+  						{
+  							"name": "GetUserAvatars",
+  							"request": {
+  								"auth": {
+  									"type": "bearer",
+  									"bearer": [
+  										{
+  											"key": "token",
+  											"value": "{{jwt_token}}",
+  											"type": "string"
+  										}
+  									]
+  								},
+  								"method": "GET",
+  								"header": [],
+  								"url": {
+  									"raw": "{{backend_host}}{{backend_v1}}/users/1/avatars",
+  									"host": [
+  										"{{backend_host}}{{backend_v1}}"
+  									],
+  									"path": [
+  										"users",
+  										"1",
+  										"avatars"
+  									]
+  								}
+  							},
+  							"response": []
+  						},
+  						{
+  							"name": "Get User Avatar",
+  							"request": {
+  								"auth": {
+  									"type": "bearer",
+  									"bearer": [
+  										{
+  											"key": "token",
+  											"value": "{{jwt_token}}",
+  											"type": "string"
+  										}
+  									]
+  								},
+  								"method": "GET",
+  								"header": [],
+  								"url": {
+  									"raw": "{{backend_host}}{{backend_v1}}/users/1/avatars/1",
+  									"host": [
+  										"{{backend_host}}{{backend_v1}}"
+  									],
+  									"path": [
+  										"users",
+  										"1",
+  										"avatars",
+  										"1"
+  									]
+  								}
+  							},
+  							"response": []
+  						},
+  						{
+  							"name": "Delete UserAvatar",
+  							"request": {
+  								"auth": {
+  									"type": "bearer",
+  									"bearer": [
+  										{
+  											"key": "token",
+  											"value": "{{jwt_token}}",
+  											"type": "string"
+  										}
+  									]
+  								},
+  								"method": "DELETE",
+  								"header": [],
+  								"url": {
+  									"raw": "{{backend_host}}{{backend_v1}}/users/1/avatars/1",
+  									"host": [
+  										"{{backend_host}}{{backend_v1}}"
+  									],
+  									"path": [
+  										"users",
+  										"1",
+  										"avatars",
+  										"1"
+  									]
+  								}
+  							},
+  							"response": []
+  						},
+  						{
+  							"name": "Update UserAvatar",
+  							"request": {
+  								"auth": {
+  									"type": "bearer",
+  									"bearer": [
+  										{
+  											"key": "token",
+  											"value": "{{jwt_token}}",
+  											"type": "string"
+  										}
+  									]
+  								},
+  								"method": "PATCH",
+  								"header": [],
+  								"body": {
+  									"mode": "raw",
+  									"raw": "{\n    \"active\":true\n}",
+  									"options": {
+  										"raw": {
+  											"language": "json"
+  										}
+  									}
+  								},
+  								"url": {
+  									"raw": "{{backend_host}}{{backend_v1}}/users/1/avatars/20",
+  									"host": [
+  										"{{backend_host}}{{backend_v1}}"
+  									],
+  									"path": [
+  										"users",
+  										"1",
+  										"avatars",
+  										"20"
+  									]
+  								}
+  							},
+  							"response": []
+  						}
+  					]
+  				},
+  				{
+  					"name": "Password Reset",
+  					"item": [
+  						{
+  							"name": "ForgotPassword",
+  							"request": {
+  								"method": "POST",
+  								"header": [],
+  								"body": {
+  									"mode": "raw",
+  									"raw": "{\n    \"email\":\"hcastellanos@speednet-wireless.com\"\n}",
+  									"options": {
+  										"raw": {
+  											"language": "json"
+  										}
+  									}
+  								},
+  								"url": {
+  									"raw": "{{backend_host}}{{backend_v1}}/forgot-password",
+  									"host": [
+  										"{{backend_host}}{{backend_v1}}"
+  									],
+  									"path": [
+  										"forgot-password"
+  									]
+  								}
+  							},
+  							"response": []
+  						},
+  						{
+  							"name": "ResetPassword",
+  							"request": {
+  								"method": "POST",
+  								"header": [],
+  								"body": {
+  									"mode": "raw",
+  									"raw": "{\n    \"password\":\"testests@101\",\n    \"confirm_password\":\"testests@101\"\n}",
+  									"options": {
+  										"raw": {
+  											"language": "json"
+  										}
+  									}
+  								},
+  								"url": {
+  									"raw": "{{backend_host}}{{backend_v1}}/reset-password/Muq5vyJ8oDzqsliFUjvCplrcODWAiV4ttIv7kibKeJfwNWc9hDlLMOVOj8IvmUQEsIOhWTaMuEukFTKuYxGqiMZXqFQvBp87mwBxMGWouoOxQFV6NPK8qpqrBSJ8yTqvG9URHLSlMAuGuTI9knFRn7CKySFThFgo7zcRbnroaxIyw8A7bwqVZmnRogNN5Z9ozU0Unje9ITSN5tYgAI4KJQfz13JxupPA8FWUxc8CZlWAh448zvcn6iuk6ZHkeWL",
+  									"host": [
+  										"{{backend_host}}{{backend_v1}}"
+  									],
+  									"path": [
+  										"reset-password",
+  										"Muq5vyJ8oDzqsliFUjvCplrcODWAiV4ttIv7kibKeJfwNWc9hDlLMOVOj8IvmUQEsIOhWTaMuEukFTKuYxGqiMZXqFQvBp87mwBxMGWouoOxQFV6NPK8qpqrBSJ8yTqvG9URHLSlMAuGuTI9knFRn7CKySFThFgo7zcRbnroaxIyw8A7bwqVZmnRogNN5Z9ozU0Unje9ITSN5tYgAI4KJQfz13JxupPA8FWUxc8CZlWAh448zvcn6iuk6ZHkeWL"
+  									]
+  								}
+  							},
+  							"response": []
+  						}
+  					]
+  				},
+  				{
+  					"name": "Article",
+  					"item": [
+  						{
+  							"name": "Get Articles",
+  							"request": {
+  								"auth": {
+  									"type": "bearer",
+  									"bearer": [
+  										{
+  											"key": "token",
+  											"value": "{{jwt_token}}",
+  											"type": "string"
+  										}
+  									]
+  								},
+  								"method": "GET",
+  								"header": [],
+  								"url": {
+  									"raw": "{{backend_host}}{{backend_v1}}/articles",
+  									"host": [
+  										"{{backend_host}}{{backend_v1}}"
+  									],
+  									"path": [
+  										"articles"
+  									]
+  								}
+  							},
+  							"response": []
+  						},
+  						{
+  							"name": "Get Article",
+  							"request": {
+  								"auth": {
+  									"type": "bearer",
+  									"bearer": [
+  										{
+  											"key": "token",
+  											"value": "{{jwt_token}}",
+  											"type": "string"
+  										}
+  									]
+  								},
+  								"method": "GET",
+  								"header": [],
+  								"url": {
+  									"raw": "{{backend_host}}{{backend_v1}}/articles/1",
+  									"host": [
+  										"{{backend_host}}{{backend_v1}}"
+  									],
+  									"path": [
+  										"articles",
+  										"1"
+  									]
+  								}
+  							},
+  							"response": []
+  						},
+  						{
+  							"name": "Create Article",
+  							"request": {
+  								"auth": {
+  									"type": "bearer",
+  									"bearer": [
+  										{
+  											"key": "token",
+  											"value": "{{jwt_token}}",
+  											"type": "string"
+  										}
+  									]
+  								},
+  								"method": "POST",
+  								"header": [],
+  								"body": {
+  									"mode": "raw",
+  									"raw": "{\n    \"name\":\"Smart Phones\",\n    \"description\":\"Phone that are very Smart\",\n    \"article_status_id\":1\n}",
+  									"options": {
+  										"raw": {
+  											"language": "json"
+  										}
+  									}
+  								},
+  								"url": {
+  									"raw": "{{backend_host}}{{backend_v1}}/articles",
+  									"host": [
+  										"{{backend_host}}{{backend_v1}}"
+  									],
+  									"path": [
+  										"articles"
+  									]
+  								}
+  							},
+  							"response": []
+  						}
+  					]
+  				},
+  				{
+  					"name": "Categories",
+  					"item": [
+  						{
+  							"name": "Get Categories",
+  							"request": {
+  								"auth": {
+  									"type": "bearer",
+  									"bearer": [
+  										{
+  											"key": "token",
+  											"value": "{{jwt_token}}",
+  											"type": "string"
+  										}
+  									]
+  								},
+  								"method": "GET",
+  								"header": [],
+  								"url": {
+  									"raw": "{{backend_host}}{{backend_v1}}/categories",
+  									"host": [
+  										"{{backend_host}}{{backend_v1}}"
+  									],
+  									"path": [
+  										"categories"
+  									]
+  								}
+  							},
+  							"response": []
+  						}
+  					]
+  				},
+  				{
+  					"name": "Article Category",
+  					"item": [
+  						{
+  							"name": "Get Categories",
+  							"request": {
+  								"auth": {
+  									"type": "bearer",
+  									"bearer": [
+  										{
+  											"key": "token",
+  											"value": "{{jwt_token}}",
+  											"type": "string"
+  										}
+  									]
+  								},
+  								"method": "GET",
+  								"header": [],
+  								"url": {
+  									"raw": "{{backend_host}}{{backend_v1}}/articles/1/categories",
+  									"host": [
+  										"{{backend_host}}{{backend_v1}}"
+  									],
+  									"path": [
+  										"articles",
+  										"1",
+  										"categories"
+  									]
+  								}
+  							},
+  							"response": []
+  						}
+  					]
+  				},
+  				{
+  					"name": "Category Article",
+  					"item": [
+  						{
+  							"name": "Get Articles",
+  							"request": {
+  								"auth": {
+  									"type": "bearer",
+  									"bearer": [
+  										{
+  											"key": "token",
+  											"value": "{{jwt_token}}",
+  											"type": "string"
+  										}
+  									]
+  								},
+  								"method": "GET",
+  								"header": [],
+  								"url": {
+  									"raw": "{{backend_host}}{{backend_v1}}/categories/1/articles",
+  									"host": [
+  										"{{backend_host}}{{backend_v1}}"
+  									],
+  									"path": [
+  										"categories",
+  										"1",
+  										"articles"
+  									]
+  								}
+  							},
+  							"response": []
+  						}
+  					]
+  				},
+  				{
+  					"name": "User Authorization",
+  					"item": [
+  						{
+  							"name": "Get User Authorization",
+  							"request": {
+  								"auth": {
+  									"type": "bearer",
+  									"bearer": [
+  										{
+  											"key": "token",
+  											"value": "{{jwt_token}}",
+  											"type": "string"
+  										}
+  									]
+  								},
+  								"method": "GET",
+  								"header": [],
+  								"url": {
+  									"raw": "{{backend_host}}{{backend_v1}}/users/myself/authorization",
+  									"host": [
+  										"{{backend_host}}{{backend_v1}}"
+  									],
+  									"path": [
+  										"users",
+  										"myself",
+  										"authorization"
+  									]
+  								}
+  							},
+  							"response": []
+  						}
+  					]
+  				},
+  				{
+  					"name": "Permission",
+  					"item": [
+  						{
+  							"name": "Create Permission",
+  							"request": {
+  								"auth": {
+  									"type": "bearer",
+  									"bearer": [
+  										{
+  											"key": "token",
+  											"value": "{{jwt_token}}",
+  											"type": "string"
+  										}
+  									]
+  								},
+  								"method": "POST",
+  								"header": [],
+  								"body": {
+  									"mode": "raw",
+  									"raw": "{\n    \"name\":\"test\",\n    \"guard_name\":\"test\"\n}",
+  									"options": {
+  										"raw": {
+  											"language": "json"
+  										}
+  									}
+  								},
+  								"url": {
+  									"raw": "{{backend_host}}{{backend_v1}}/permissions",
+  									"host": [
+  										"{{backend_host}}{{backend_v1}}"
+  									],
+  									"path": [
+  										"permissions"
+  									]
+  								}
+  							},
+  							"response": []
+  						},
+  						{
+  							"name": "Get Permissions",
+  							"request": {
+  								"auth": {
+  									"type": "bearer",
+  									"bearer": [
+  										{
+  											"key": "token",
+  											"value": "{{jwt_token}}",
+  											"type": "string"
+  										}
+  									]
+  								},
+  								"method": "GET",
+  								"header": [],
+  								"url": {
+  									"raw": "{{backend_host}}{{backend_v1}}/permissions",
+  									"host": [
+  										"{{backend_host}}{{backend_v1}}"
+  									],
+  									"path": [
+  										"permissions"
+  									]
+  								}
+  							},
+  							"response": []
+  						},
+  						{
+  							"name": "Get Permission",
+  							"request": {
+  								"auth": {
+  									"type": "bearer",
+  									"bearer": [
+  										{
+  											"key": "token",
+  											"value": "{{jwt_token}}",
+  											"type": "string"
+  										}
+  									]
+  								},
+  								"method": "GET",
+  								"header": [],
+  								"url": {
+  									"raw": "{{backend_host}}{{backend_v1}}/permissions/1",
+  									"host": [
+  										"{{backend_host}}{{backend_v1}}"
+  									],
+  									"path": [
+  										"permissions",
+  										"1"
+  									]
+  								}
+  							},
+  							"response": []
+  						},
+  						{
+  							"name": "Delete Permission",
+  							"request": {
+  								"auth": {
+  									"type": "bearer",
+  									"bearer": [
+  										{
+  											"key": "token",
+  											"value": "{{jwt_token}}",
+  											"type": "string"
+  										}
+  									]
+  								},
+  								"method": "DELETE",
+  								"header": [],
+  								"url": {
+  									"raw": "{{backend_host}}{{backend_v1}}/permissions/6",
+  									"host": [
+  										"{{backend_host}}{{backend_v1}}"
+  									],
+  									"path": [
+  										"permissions",
+  										"6"
+  									]
+  								}
+  							},
+  							"response": []
+  						}
+  					]
+  				},
+  				{
+  					"name": "Role",
+  					"item": [
+  						{
+  							"name": "Create Role",
+  							"request": {
+  								"auth": {
+  									"type": "bearer",
+  									"bearer": [
+  										{
+  											"key": "token",
+  											"value": "{{jwt_token}}",
+  											"type": "string"
+  										}
+  									]
+  								},
+  								"method": "POST",
+  								"header": [],
+  								"body": {
+  									"mode": "raw",
+  									"raw": "{\n    \"name\":\"Developer\",\n    \"guard_name\":\"web\"\n}",
+  									"options": {
+  										"raw": {
+  											"language": "json"
+  										}
+  									}
+  								},
+  								"url": {
+  									"raw": "{{backend_host}}{{backend_v1}}/roles",
+  									"host": [
+  										"{{backend_host}}{{backend_v1}}"
+  									],
+  									"path": [
+  										"roles"
+  									]
+  								}
+  							},
+  							"response": []
+  						},
+  						{
+  							"name": "Get Roles",
+  							"request": {
+  								"auth": {
+  									"type": "bearer",
+  									"bearer": [
+  										{
+  											"key": "token",
+  											"value": "{{jwt_token}}",
+  											"type": "string"
+  										}
+  									]
+  								},
+  								"method": "GET",
+  								"header": [],
+  								"url": {
+  									"raw": "{{backend_host}}{{backend_v1}}/roles",
+  									"host": [
+  										"{{backend_host}}{{backend_v1}}"
+  									],
+  									"path": [
+  										"roles"
+  									]
+  								}
+  							},
+  							"response": []
+  						},
+  						{
+  							"name": "Get Role",
+  							"request": {
+  								"auth": {
+  									"type": "bearer",
+  									"bearer": [
+  										{
+  											"key": "token",
+  											"value": "{{jwt_token}}",
+  											"type": "string"
+  										}
+  									]
+  								},
+  								"method": "GET",
+  								"header": [],
+  								"url": {
+  									"raw": "{{backend_host}}{{backend_v1}}/roles/2",
+  									"host": [
+  										"{{backend_host}}{{backend_v1}}"
+  									],
+  									"path": [
+  										"roles",
+  										"2"
+  									]
+  								}
+  							},
+  							"response": []
+  						},
+  						{
+  							"name": "Delete Role",
+  							"request": {
+  								"auth": {
+  									"type": "bearer",
+  									"bearer": [
+  										{
+  											"key": "token",
+  											"value": "{{jwt_token}}",
+  											"type": "string"
+  										}
+  									]
+  								},
+  								"method": "DELETE",
+  								"header": [],
+  								"url": {
+  									"raw": "{{backend_host}}{{backend_v1}}/roles/4",
+  									"host": [
+  										"{{backend_host}}{{backend_v1}}"
+  									],
+  									"path": [
+  										"roles",
+  										"4"
+  									]
+  								}
+  							},
+  							"response": []
+  						},
+  						{
+  							"name": "Patch Role",
+  							"request": {
+  								"auth": {
+  									"type": "bearer",
+  									"bearer": [
+  										{
+  											"key": "token",
+  											"value": "{{jwt_token}}",
+  											"type": "string"
+  										}
+  									]
+  								},
+  								"method": "PATCH",
+  								"header": [],
+  								"body": {
+  									"mode": "raw",
+  									"raw": "{\n    \"name\":\"\"\n}",
+  									"options": {
+  										"raw": {
+  											"language": "json"
+  										}
+  									}
+  								},
+  								"url": {
+  									"raw": "{{backend_host}}{{backend_v1}}/roles/3",
+  									"host": [
+  										"{{backend_host}}{{backend_v1}}"
+  									],
+  									"path": [
+  										"roles",
+  										"3"
+  									]
+  								}
+  							},
+  							"response": []
+  						},
+  						{
+  							"name": "Put Role",
+  							"request": {
+  								"auth": {
+  									"type": "bearer",
+  									"bearer": [
+  										{
+  											"key": "token",
+  											"value": "{{jwt_token}}",
+  											"type": "string"
+  										}
+  									]
+  								},
+  								"method": "PUT",
+  								"header": [],
+  								"body": {
+  									"mode": "raw",
+  									"raw": "{\n    \"name\":\"Admin\",\n    \"guard_name\":\"web\",\n    \"role_email\":\"\"\n}",
+  									"options": {
+  										"raw": {
+  											"language": "json"
+  										}
+  									}
+  								},
+  								"url": {
+  									"raw": "{{backend_host}}{{backend_v1}}/roles/3",
+  									"host": [
+  										"{{backend_host}}{{backend_v1}}"
+  									],
+  									"path": [
+  										"roles",
+  										"3"
+  									]
+  								}
+  							},
+  							"response": []
+  						}
+  					]
+  				},
+  				{
+  					"name": "Role Permission",
+  					"item": [
+  						{
+  							"name": "Get Role Permission",
+  							"request": {
+  								"auth": {
+  									"type": "bearer",
+  									"bearer": [
+  										{
+  											"key": "token",
+  											"value": "{{jwt_token}}",
+  											"type": "string"
+  										}
+  									]
+  								},
+  								"method": "GET",
+  								"header": [],
+  								"url": {
+  									"raw": "{{backend_host}}{{backend_v1}}/roles/1/permissions/2",
+  									"host": [
+  										"{{backend_host}}{{backend_v1}}"
+  									],
+  									"path": [
+  										"roles",
+  										"1",
+  										"permissions",
+  										"2"
+  									]
+  								}
+  							},
+  							"response": []
+  						},
+  						{
+  							"name": "Get Role Permissions",
+  							"request": {
+  								"auth": {
+  									"type": "bearer",
+  									"bearer": [
+  										{
+  											"key": "token",
+  											"value": "{{jwt_token}}",
+  											"type": "string"
+  										}
+  									]
+  								},
+  								"method": "GET",
+  								"header": [],
+  								"url": {
+  									"raw": "{{backend_host}}{{backend_v1}}/roles/1/permissions",
+  									"host": [
+  										"{{backend_host}}{{backend_v1}}"
+  									],
+  									"path": [
+  										"roles",
+  										"1",
+  										"permissions"
+  									]
+  								}
+  							},
+  							"response": []
+  						},
+  						{
+  							"name": "Attach Permission",
+  							"request": {
+  								"auth": {
+  									"type": "bearer",
+  									"bearer": [
+  										{
+  											"key": "token",
+  											"value": "{{jwt_token}}",
+  											"type": "string"
+  										}
+  									]
+  								},
+  								"method": "POST",
+  								"header": [],
+  								"url": {
+  									"raw": "{{backend_host}}{{backend_v1}}/roles/1/permissions/7",
+  									"host": [
+  										"{{backend_host}}{{backend_v1}}"
+  									],
+  									"path": [
+  										"roles",
+  										"1",
+  										"permissions",
+  										"7"
+  									]
+  								}
+  							},
+  							"response": []
+  						},
+  						{
+  							"name": "Detach Permission",
+  							"request": {
+  								"auth": {
+  									"type": "bearer",
+  									"bearer": [
+  										{
+  											"key": "token",
+  											"value": "{{jwt_token}}",
+  											"type": "string"
+  										}
+  									]
+  								},
+  								"method": "DELETE",
+  								"header": [],
+  								"url": {
+  									"raw": "{{backend_host}}{{backend_v1}}/roles/1/permissions/3",
+  									"host": [
+  										"{{backend_host}}{{backend_v1}}"
+  									],
+  									"path": [
+  										"roles",
+  										"1",
+  										"permissions",
+  										"3"
+  									]
+  								}
+  							},
+  							"response": []
+  						}
+  					]
+  				},
+  				{
+  					"name": "Permission User",
+  					"item": [
+  						{
+  							"name": "Get Permission User",
+  							"request": {
+  								"auth": {
+  									"type": "bearer",
+  									"bearer": [
+  										{
+  											"key": "token",
+  											"value": "{{jwt_token}}",
+  											"type": "string"
+  										}
+  									]
+  								},
+  								"method": "GET",
+  								"header": [],
+  								"url": {
+  									"raw": "{{backend_host}}{{backend_v1}}/permissions/1/users/1",
+  									"host": [
+  										"{{backend_host}}{{backend_v1}}"
+  									],
+  									"path": [
+  										"permissions",
+  										"1",
+  										"users",
+  										"1"
+  									]
+  								}
+  							},
+  							"response": []
+  						},
+  						{
+  							"name": "Get Permission Users",
+  							"request": {
+  								"auth": {
+  									"type": "bearer",
+  									"bearer": [
+  										{
+  											"key": "token",
+  											"value": "{{jwt_token}}",
+  											"type": "string"
+  										}
+  									]
+  								},
+  								"method": "GET",
+  								"header": [],
+  								"url": {
+  									"raw": "{{backend_host}}{{backend_v1}}/permissions/1/users",
+  									"host": [
+  										"{{backend_host}}{{backend_v1}}"
+  									],
+  									"path": [
+  										"permissions",
+  										"1",
+  										"users"
+  									]
+  								}
+  							},
+  							"response": []
+  						},
+  						{
+  							"name": "Attach Permission User",
+  							"request": {
+  								"auth": {
+  									"type": "bearer",
+  									"bearer": [
+  										{
+  											"key": "token",
+  											"value": "{{jwt_token}}",
+  											"type": "string"
+  										}
+  									]
+  								},
+  								"method": "POST",
+  								"header": [],
+  								"url": {
+  									"raw": "{{backend_host}}{{backend_v1}}/permissions/1/users/2",
+  									"host": [
+  										"{{backend_host}}{{backend_v1}}"
+  									],
+  									"path": [
+  										"permissions",
+  										"1",
+  										"users",
+  										"2"
+  									]
+  								}
+  							},
+  							"response": []
+  						},
+  						{
+  							"name": "Detach Permission User",
+  							"request": {
+  								"auth": {
+  									"type": "bearer",
+  									"bearer": [
+  										{
+  											"key": "token",
+  											"value": "{{jwt_token}}",
+  											"type": "string"
+  										}
+  									]
+  								},
+  								"method": "DELETE",
+  								"header": [],
+  								"url": {
+  									"raw": "{{backend_host}}{{backend_v1}}/permissions/1/users/2",
+  									"host": [
+  										"{{backend_host}}{{backend_v1}}"
+  									],
+  									"path": [
+  										"permissions",
+  										"1",
+  										"users",
+  										"2"
+  									]
+  								}
+  							},
+  							"response": []
+  						}
+  					]
+  				},
+  				{
+  					"name": "Role User",
+  					"item": [
+  						{
+  							"name": "Get Role User",
+  							"request": {
+  								"auth": {
+  									"type": "bearer",
+  									"bearer": [
+  										{
+  											"key": "token",
+  											"value": "{{jwt_token}}",
+  											"type": "string"
+  										}
+  									]
+  								},
+  								"method": "GET",
+  								"header": [],
+  								"url": {
+  									"raw": "{{backend_host}}{{backend_v1}}/roles/1/users/1",
+  									"host": [
+  										"{{backend_host}}{{backend_v1}}"
+  									],
+  									"path": [
+  										"roles",
+  										"1",
+  										"users",
+  										"1"
+  									]
+  								}
+  							},
+  							"response": []
+  						},
+  						{
+  							"name": "Get Role Users",
+  							"request": {
+  								"auth": {
+  									"type": "bearer",
+  									"bearer": [
+  										{
+  											"key": "token",
+  											"value": "{{jwt_token}}",
+  											"type": "string"
+  										}
+  									]
+  								},
+  								"method": "GET",
+  								"header": [],
+  								"url": {
+  									"raw": "{{backend_host}}{{backend_v1}}/roles/1/users",
+  									"host": [
+  										"{{backend_host}}{{backend_v1}}"
+  									],
+  									"path": [
+  										"roles",
+  										"1",
+  										"users"
+  									]
+  								}
+  							},
+  							"response": []
+  						},
+  						{
+  							"name": "Attach User",
+  							"request": {
+  								"auth": {
+  									"type": "bearer",
+  									"bearer": [
+  										{
+  											"key": "token",
+  											"value": "{{jwt_token}}",
+  											"type": "string"
+  										}
+  									]
+  								},
+  								"method": "POST",
+  								"header": [],
+  								"url": {
+  									"raw": "{{backend_host}}{{backend_v1}}/roles/1/users/3",
+  									"host": [
+  										"{{backend_host}}{{backend_v1}}"
+  									],
+  									"path": [
+  										"roles",
+  										"1",
+  										"users",
+  										"3"
+  									]
+  								}
+  							},
+  							"response": []
+  						},
+  						{
+  							"name": "Detach User",
+  							"request": {
+  								"auth": {
+  									"type": "bearer",
+  									"bearer": [
+  										{
+  											"key": "token",
+  											"value": "{{jwt_token}}",
+  											"type": "string"
+  										}
+  									]
+  								},
+  								"method": "DELETE",
+  								"header": [],
+  								"url": {
+  									"raw": "{{backend_host}}{{backend_v1}}/roles/1/users/3",
+  									"host": [
+  										"{{backend_host}}{{backend_v1}}"
+  									],
+  									"path": [
+  										"roles",
+  										"1",
+  										"users",
+  										"3"
+  									]
+  								}
+  							},
+  							"response": []
+  						}
+  					]
+  				}
+  			]
+  		}
+  	]
+  }
+contentType: yaml

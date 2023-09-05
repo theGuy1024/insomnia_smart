@@ -1,0 +1,25 @@
+_id: req_a7ade5ac390941699af7d19091bfa629
+type: Request
+parentId: fld_ba467b663a5c43879b8a20a3f4d3a043
+modified: 1693889475605
+created: 1693889475605
+url: "{{backend_host}}{{backend_v1}}/users/1/avatars/1"
+name: Get User Avatar
+description: ""
+method: GET
+body: {}
+parameters: []
+headers: []
+authentication:
+  type: bearer
+  disabled: false
+  token: "{{jwt_token}}"
+  prefix: ""
+metaSortKey: -1693889475605
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

@@ -1,0 +1,31 @@
+_id: req_48329eb8f3614497b8ef55a26d596cb0
+type: Request
+parentId: fld_acab743682914a218da22577f787cd3f
+modified: 1693889475613
+created: 1693889475613
+url: "{{backend_host}}{{backend_v1}}/categories"
+name: Create Categories
+description: ""
+method: POST
+body:
+  mimeType: ""
+  text: |-
+    {
+        "Name":"Mexicans",
+        "Description":"Human Worker"
+    }
+parameters: []
+headers: []
+authentication:
+  type: bearer
+  disabled: false
+  token: "{{jwt_token}}"
+  prefix: ""
+metaSortKey: -1693889475613
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

@@ -1,0 +1,25 @@
+_id: req_0f2820b7d6aa472ab78efdd7fc852a66
+type: Request
+parentId: fld_226d95a7990e4b39bf47d638d7682e85
+modified: 1693889475628
+created: 1693889475628
+url: "{{backend_host}}{{backend_v1}}/roles/1/users/1"
+name: Get Role User
+description: ""
+method: GET
+body: {}
+parameters: []
+headers: []
+authentication:
+  type: bearer
+  disabled: false
+  token: "{{jwt_token}}"
+  prefix: ""
+metaSortKey: -1693889475628
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

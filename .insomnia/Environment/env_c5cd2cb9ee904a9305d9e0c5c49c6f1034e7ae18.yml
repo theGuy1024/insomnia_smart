@@ -1,0 +1,16 @@
+_id: env_c5cd2cb9ee904a9305d9e0c5c49c6f1034e7ae18
+type: Environment
+parentId: wrk_4e73721c85f8432abaf4d9a4b30d02f1
+modified: 1693889974467
+created: 1693889128960
+name: Base Environment
+data:
+  backend_host: http://127.0.0.1:3001
+  backend_v1: /api/v1
+dataPropertyOrder:
+  "&":
+    - backend_host
+    - backend_v1
+color: null
+isPrivate: false
+metaSortKey: 1693889128960

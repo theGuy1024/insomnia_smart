@@ -1,0 +1,25 @@
+_id: req_0cf62b6eb96346d88eb23fe90d3e436a
+type: Request
+parentId: fld_b7526be61e204ab293e4ab4e67d7d017
+modified: 1693889475618
+created: 1693889475618
+url: "{{backend_host}}{{backend_v1}}/permissions/1"
+name: Get Permission
+description: ""
+method: GET
+body: {}
+parameters: []
+headers: []
+authentication:
+  type: bearer
+  disabled: false
+  token: "{{jwt_token}}"
+  prefix: ""
+metaSortKey: -1693889475618
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

@@ -1,0 +1,32 @@
+_id: req_92edceebbef742f095a57e9641117c2d
+type: Request
+parentId: fld_4cac7f5069bd4dd48fb43b8252f74c8b
+modified: 1693889475611
+created: 1693889475611
+url: "{{backend_host}}{{backend_v1}}/articles"
+name: Create Article
+description: ""
+method: POST
+body:
+  mimeType: ""
+  text: |-
+    {
+        "name":"Smart Phones",
+        "description":"Phone that are very Smart",
+        "article_status_id":1
+    }
+parameters: []
+headers: []
+authentication:
+  type: bearer
+  disabled: false
+  token: "{{jwt_token}}"
+  prefix: ""
+metaSortKey: -1693889475611
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

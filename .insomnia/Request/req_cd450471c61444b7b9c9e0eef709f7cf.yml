@@ -1,0 +1,25 @@
+_id: req_cd450471c61444b7b9c9e0eef709f7cf
+type: Request
+parentId: fld_ca5be14674f844219f6dceb9bf1bc0e4
+modified: 1693889475624
+created: 1693889475624
+url: "{{backend_host}}{{backend_v1}}/roles/100/permissions"
+name: Get Role Permissions
+description: ""
+method: GET
+body: {}
+parameters: []
+headers: []
+authentication:
+  type: bearer
+  disabled: false
+  token: "{{jwt_token}}"
+  prefix: ""
+metaSortKey: -1693889475624
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

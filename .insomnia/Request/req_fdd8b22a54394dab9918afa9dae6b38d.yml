@@ -1,0 +1,31 @@
+_id: req_fdd8b22a54394dab9918afa9dae6b38d
+type: Request
+parentId: fld_b7526be61e204ab293e4ab4e67d7d017
+modified: 1693889475617
+created: 1693889475617
+url: "{{backend_host}}{{backend_v1}}/permissions"
+name: Create Permission
+description: ""
+method: POST
+body:
+  mimeType: ""
+  text: |-
+    {
+        "name":"test",
+        "guard_name":"test"
+    }
+parameters: []
+headers: []
+authentication:
+  type: bearer
+  disabled: false
+  token: "{{jwt_token}}"
+  prefix: ""
+metaSortKey: -1693889475617
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

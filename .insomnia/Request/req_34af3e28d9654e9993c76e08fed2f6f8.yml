@@ -1,0 +1,25 @@
+_id: req_34af3e28d9654e9993c76e08fed2f6f8
+type: Request
+parentId: fld_226d95a7990e4b39bf47d638d7682e85
+modified: 1693889475630
+created: 1693889475630
+url: "{{backend_host}}{{backend_v1}}/roles/1/users/3"
+name: Detach User
+description: ""
+method: DELETE
+body: {}
+parameters: []
+headers: []
+authentication:
+  type: bearer
+  disabled: false
+  token: "{{jwt_token}}"
+  prefix: ""
+metaSortKey: -1693889475630
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

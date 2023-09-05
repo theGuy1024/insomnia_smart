@@ -1,0 +1,30 @@
+_id: req_22f846134bdb4dd89cd603962896f11b
+type: Request
+parentId: fld_4cac7f5069bd4dd48fb43b8252f74c8b
+modified: 1693889475611
+created: 1693889475611
+url: "{{backend_host}}{{backend_v1}}/articles/1"
+name: Patch Article
+description: ""
+method: PATCH
+body:
+  mimeType: ""
+  text: |-
+    {
+        "name":"Phone"
+    }
+parameters: []
+headers: []
+authentication:
+  type: bearer
+  disabled: false
+  token: "{{jwt_token}}"
+  prefix: ""
+metaSortKey: -1693889475611
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

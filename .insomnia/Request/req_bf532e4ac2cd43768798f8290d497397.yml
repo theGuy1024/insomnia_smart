@@ -1,0 +1,25 @@
+_id: req_bf532e4ac2cd43768798f8290d497397
+type: Request
+parentId: fld_226d95a7990e4b39bf47d638d7682e85
+modified: 1693889475629
+created: 1693889475629
+url: "{{backend_host}}{{backend_v1}}/roles/1/users/3"
+name: Attach User
+description: ""
+method: POST
+body: {}
+parameters: []
+headers: []
+authentication:
+  type: bearer
+  disabled: false
+  token: "{{jwt_token}}"
+  prefix: ""
+metaSortKey: -1693889475629
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

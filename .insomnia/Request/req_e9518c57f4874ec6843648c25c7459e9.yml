@@ -1,0 +1,25 @@
+_id: req_e9518c57f4874ec6843648c25c7459e9
+type: Request
+parentId: fld_14c5c25610194d65b279f297ab5fb22c
+modified: 1693889475632
+created: 1693889475632
+url: "{{backend_host}}{{backend_v1}}/warehouses/3"
+name: Get Warehouse
+description: ""
+method: GET
+body: {}
+parameters: []
+headers: []
+authentication:
+  type: bearer
+  disabled: false
+  token: "{{jwt_token}}"
+  prefix: ""
+metaSortKey: -1693889475632
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

@@ -1,0 +1,25 @@
+_id: req_c6b4d4e0d3154cc09256f7555a936844
+type: Request
+parentId: fld_61ae5f52b3834d24b23c588be6a47baa
+modified: 1693889475627
+created: 1693889475627
+url: "{{backend_host}}{{backend_v1}}/permissions/1/users/2"
+name: Attach Permission User
+description: ""
+method: POST
+body: {}
+parameters: []
+headers: []
+authentication:
+  type: bearer
+  disabled: false
+  token: "{{jwt_token}}"
+  prefix: ""
+metaSortKey: -1693889475627
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

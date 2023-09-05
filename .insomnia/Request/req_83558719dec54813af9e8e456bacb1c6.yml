@@ -1,0 +1,25 @@
+_id: req_83558719dec54813af9e8e456bacb1c6
+type: Request
+parentId: fld_ca5be14674f844219f6dceb9bf1bc0e4
+modified: 1693889475625
+created: 1693889475625
+url: "{{backend_host}}{{backend_v1}}/roles/1/permissions/3"
+name: Detach Permission
+description: ""
+method: DELETE
+body: {}
+parameters: []
+headers: []
+authentication:
+  type: bearer
+  disabled: false
+  token: "{{jwt_token}}"
+  prefix: ""
+metaSortKey: -1693889475625
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

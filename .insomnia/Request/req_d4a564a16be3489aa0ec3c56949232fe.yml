@@ -1,0 +1,31 @@
+_id: req_d4a564a16be3489aa0ec3c56949232fe
+type: Request
+parentId: fld_afb1f8d16f204cfdbc3406b3b60686b0
+modified: 1693889475599
+created: 1693889475599
+url: "{{backend_host}}{{backend_v1}}/users/1"
+name: Update User
+description: ""
+method: PATCH
+body:
+  mimeType: ""
+  text: |-
+    {
+        "user_name":"Admin",
+        "middle_name":"11"
+    }
+parameters: []
+headers: []
+authentication:
+  type: bearer
+  disabled: false
+  token: "{{jwt_token}}"
+  prefix: ""
+metaSortKey: -1693889475599
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

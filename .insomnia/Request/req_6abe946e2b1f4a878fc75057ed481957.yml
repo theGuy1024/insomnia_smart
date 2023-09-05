@@ -1,0 +1,25 @@
+_id: req_6abe946e2b1f4a878fc75057ed481957
+type: Request
+parentId: fld_acab743682914a218da22577f787cd3f
+modified: 1693889475613
+created: 1693889475613
+url: "{{backend_host}}{{backend_v1}}/categories/1"
+name: Get Category
+description: ""
+method: GET
+body: {}
+parameters: []
+headers: []
+authentication:
+  type: bearer
+  disabled: false
+  token: "{{jwt_token}}"
+  prefix: ""
+metaSortKey: -1693889475613
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

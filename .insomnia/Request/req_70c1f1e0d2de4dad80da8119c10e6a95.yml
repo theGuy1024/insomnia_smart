@@ -1,0 +1,25 @@
+_id: req_70c1f1e0d2de4dad80da8119c10e6a95
+type: Request
+parentId: fld_b7526be61e204ab293e4ab4e67d7d017
+modified: 1693889475619
+created: 1693889475619
+url: "{{backend_host}}{{backend_v1}}/permissions/6"
+name: Delete Permission
+description: ""
+method: DELETE
+body: {}
+parameters: []
+headers: []
+authentication:
+  type: bearer
+  disabled: false
+  token: "{{jwt_token}}"
+  prefix: ""
+metaSortKey: -1693889475619
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

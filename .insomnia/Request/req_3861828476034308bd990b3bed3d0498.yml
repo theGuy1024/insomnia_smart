@@ -1,0 +1,30 @@
+_id: req_3861828476034308bd990b3bed3d0498
+type: Request
+parentId: fld_ba467b663a5c43879b8a20a3f4d3a043
+modified: 1693889475606
+created: 1693889475606
+url: "{{backend_host}}{{backend_v1}}/users/1/avatars/20"
+name: Update UserAvatar
+description: ""
+method: PATCH
+body:
+  mimeType: ""
+  text: |-
+    {
+        "active":true
+    }
+parameters: []
+headers: []
+authentication:
+  type: bearer
+  disabled: false
+  token: "{{jwt_token}}"
+  prefix: ""
+metaSortKey: -1693889475606
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global
