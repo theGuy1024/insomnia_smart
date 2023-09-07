@@ -1,0 +1,32 @@
+_id: req_bae17b405a5a41949636361057873533
+type: Request
+parentId: fld_b108843c13d34818842d0dd76160a751
+modified: 1693585664813
+created: 1693585664813
+url: "{{backend_host}}{{backend_v1}}/roles/3"
+name: Put Role
+description: ""
+method: PUT
+body:
+  mimeType: ""
+  text: |-
+    {
+        "name":"Admin",
+        "guard_name":"web",
+        "role_email":""
+    }
+parameters: []
+headers: []
+authentication:
+  type: bearer
+  disabled: false
+  token: "{{jwt_token}}"
+  prefix: ""
+metaSortKey: -1693585664813
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

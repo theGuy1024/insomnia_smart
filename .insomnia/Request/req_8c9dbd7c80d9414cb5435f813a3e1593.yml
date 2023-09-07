@@ -1,0 +1,25 @@
+_id: req_8c9dbd7c80d9414cb5435f813a3e1593
+type: Request
+parentId: fld_4a583b1bfc0147fdaa9ca28e2898d084
+modified: 1693585664827
+created: 1693585664827
+url: "{{backend_host}}{{backend_v1}}/users/100/roles"
+name: Get User Roles
+description: ""
+method: GET
+body: {}
+parameters: []
+headers: []
+authentication:
+  type: bearer
+  disabled: false
+  token: "{{jwt_token}}"
+  prefix: ""
+metaSortKey: -1693585664827
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

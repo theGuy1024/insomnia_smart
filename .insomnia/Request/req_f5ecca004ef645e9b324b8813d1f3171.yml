@@ -1,0 +1,35 @@
+_id: req_f5ecca004ef645e9b324b8813d1f3171
+type: Request
+parentId: fld_5576a83a1e264da49982df875e1acd92
+modified: 1693585664786
+created: 1693585664786
+url: "{{backend_host}}{{backend_v1}}/users"
+name: CreateUser
+description: ""
+method: POST
+body:
+  mimeType: ""
+  text: |-
+    {
+        "user_name":"testUser@3",
+        "email":"test3@speednet-wireless.com",
+        "first_name":"Hector",
+        "last_name":"Castellanos",
+        "password":"P@ssword1",
+        "confirm_password":"P@ssword1"
+    }
+parameters: []
+headers: []
+authentication:
+  type: bearer
+  disabled: false
+  token: ""
+  prefix: ""
+metaSortKey: -1693585664786
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

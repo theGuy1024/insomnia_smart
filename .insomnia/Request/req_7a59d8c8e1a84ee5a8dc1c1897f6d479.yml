@@ -1,0 +1,30 @@
+_id: req_7a59d8c8e1a84ee5a8dc1c1897f6d479
+type: Request
+parentId: fld_b108843c13d34818842d0dd76160a751
+modified: 1693585664813
+created: 1693585664813
+url: "{{backend_host}}{{backend_v1}}/roles/3"
+name: Patch Role
+description: ""
+method: PATCH
+body:
+  mimeType: ""
+  text: |-
+    {
+        "name":""
+    }
+parameters: []
+headers: []
+authentication:
+  type: bearer
+  disabled: false
+  token: "{{jwt_token}}"
+  prefix: ""
+metaSortKey: -1693585664813
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

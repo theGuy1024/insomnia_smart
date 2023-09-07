@@ -1,0 +1,32 @@
+_id: req_e4b3ca317bf04069abc8e3649d1ab3ba
+type: Request
+parentId: fld_f79e6b65d56c4139acc9acf00c597164
+modified: 1693585664829
+created: 1693585664829
+url: "{{backend_host}}{{backend_v1}}/warehouses"
+name: Create Warehouse
+description: ""
+method: POST
+body:
+  mimeType: ""
+  text: |-
+    {
+        "name":"Chicken Warehouse",
+        "description":"A Personalized warehouse for the chicken",
+        "warehouse_status_id":1
+    }
+parameters: []
+headers: []
+authentication:
+  type: bearer
+  disabled: false
+  token: "{{jwt_token}}"
+  prefix: ""
+metaSortKey: -1693585664829
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

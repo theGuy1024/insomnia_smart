@@ -1,0 +1,26 @@
+_id: req_3021dd78aca849d2a8fcce68ae86dad3
+type: Request
+parentId: fld_a372574f7e394bc6b6107090a925cf30
+modified: 1693585664783
+created: 1693585664783
+url: "{{backend_host}}{{backend_v1}}/refresh-token"
+name: RefreshToken
+description: ""
+method: POST
+body:
+  mimeType: ""
+  text: >-
+    {
+        "refresh_token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImV4cCI6MTY5MjM4MDY1M30.tTVWBvspiVfFYawudbrkBrxKXJwiHV3_-bMSJIP14wE"
+    }
+parameters: []
+headers: []
+authentication: {}
+metaSortKey: -1693585664783
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

@@ -1,0 +1,25 @@
+_id: req_6d842a3b130e404d822cbcaa471a098f
+type: Request
+parentId: fld_e71180bdc9324c1eb0d7afaf79ce5463
+modified: 1693585664794
+created: 1693585664794
+url: "{{backend_host}}{{backend_v1}}/users/1/avatars/1"
+name: Delete UserAvatar
+description: ""
+method: DELETE
+body: {}
+parameters: []
+headers: []
+authentication:
+  type: bearer
+  disabled: false
+  token: "{{jwt_token}}"
+  prefix: ""
+metaSortKey: -1693585664794
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

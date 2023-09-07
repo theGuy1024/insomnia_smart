@@ -1,0 +1,27 @@
+_id: req_a73c74b8af37484eb86316eadaac2988
+type: Request
+parentId: fld_df422c87083e4aa5a692e10891200695
+modified: 1694115840543
+created: 1694115823445
+url: "{{backend_host}}{{backend_v1}}/warehouse-request/1"
+name: New Request
+description: ""
+method: GET
+body:
+  mimeType: application/json
+  text: ""
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+  - name: User-Agent
+    value: insomnia/2023.5.8
+authentication: {}
+metaSortKey: -1694115823445
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

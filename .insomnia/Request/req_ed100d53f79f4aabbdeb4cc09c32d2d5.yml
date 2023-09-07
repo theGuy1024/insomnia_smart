@@ -1,0 +1,31 @@
+_id: req_ed100d53f79f4aabbdeb4cc09c32d2d5
+type: Request
+parentId: fld_b108843c13d34818842d0dd76160a751
+modified: 1693585664811
+created: 1693585664811
+url: "{{backend_host}}{{backend_v1}}/roles"
+name: Create Role
+description: ""
+method: POST
+body:
+  mimeType: ""
+  text: |-
+    {
+        "name":"Role sixth",
+        "guard_name":"web"
+    }
+parameters: []
+headers: []
+authentication:
+  type: bearer
+  disabled: false
+  token: "{{jwt_token}}"
+  prefix: ""
+metaSortKey: -1693585664811
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

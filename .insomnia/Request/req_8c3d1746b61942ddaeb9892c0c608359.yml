@@ -1,0 +1,30 @@
+_id: req_8c3d1746b61942ddaeb9892c0c608359
+type: Request
+parentId: fld_41e595dc49a143edb1675fdaa6e478b3
+modified: 1693585664797
+created: 1693585664797
+url: "{{backend_host}}{{backend_v1}}/reset-password/Muq5vyJ8oDzqsliFUjvCplrcODW\
+  AiV4ttIv7kibKeJfwNWc9hDlLMOVOj8IvmUQEsIOhWTaMuEukFTKuYxGqiMZXqFQvBp87mwBxMGWo\
+  uoOxQFV6NPK8qpqrBSJ8yTqvG9URHLSlMAuGuTI9knFRn7CKySFThFgo7zcRbnroaxIyw8A7bwqVZ\
+  mnRogNN5Z9ozU0Unje9ITSN5tYgAI4KJQfz13JxupPA8FWUxc8CZlWAh448zvcn6iuk6ZHkeWL"
+name: ResetPassword
+description: ""
+method: POST
+body:
+  mimeType: ""
+  text: |-
+    {
+        "password":"testests@101",
+        "confirm_password":"testests@101"
+    }
+parameters: []
+headers: []
+authentication: {}
+metaSortKey: -1693585664797
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

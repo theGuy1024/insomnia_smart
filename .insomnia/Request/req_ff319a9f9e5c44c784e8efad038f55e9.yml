@@ -1,0 +1,31 @@
+_id: req_ff319a9f9e5c44c784e8efad038f55e9
+type: Request
+parentId: fld_5576a83a1e264da49982df875e1acd92
+modified: 1693585664790
+created: 1693585664790
+url: "{{backend_host}}{{backend_v1}}/users/myself"
+name: Update Myself
+description: ""
+method: PATCH
+body:
+  mimeType: ""
+  text: |-
+    {
+        "user_name":"Admin1",
+        "middle_name": "a"
+    }
+parameters: []
+headers: []
+authentication:
+  type: bearer
+  disabled: false
+  token: "{{jwt_token}}"
+  prefix: ""
+metaSortKey: -1693585664790
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

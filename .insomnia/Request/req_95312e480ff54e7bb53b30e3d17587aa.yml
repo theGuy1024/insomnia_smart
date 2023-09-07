@@ -1,0 +1,25 @@
+_id: req_95312e480ff54e7bb53b30e3d17587aa
+type: Request
+parentId: fld_5576a83a1e264da49982df875e1acd92
+modified: 1693585664789
+created: 1693585664789
+url: "{{backend_host}}{{backend_v1}}/users/myself"
+name: Myself
+description: ""
+method: GET
+body: {}
+parameters: []
+headers: []
+authentication:
+  type: bearer
+  disabled: false
+  token: "{{jwt_token}}"
+  prefix: ""
+metaSortKey: -1693585664789
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

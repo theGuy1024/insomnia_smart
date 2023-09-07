@@ -1,0 +1,25 @@
+_id: req_7d31b4e2f6fc45ceb331df1eafd37e18
+type: Request
+parentId: fld_f2b3fe031fff41d1b60a57a43b719b78
+modified: 1693585664805
+created: 1693585664805
+url: "{{backend_host}}{{backend_v1}}/articles/1/categories/4"
+name: Detach Article Category
+description: ""
+method: DELETE
+body: {}
+parameters: []
+headers: []
+authentication:
+  type: bearer
+  disabled: false
+  token: "{{jwt_token}}"
+  prefix: ""
+metaSortKey: -1693585664805
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

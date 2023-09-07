@@ -1,0 +1,25 @@
+_id: req_bd29625394e34327b7a0884a1c85c54e
+type: Request
+parentId: fld_bf678838026d4535bf189433e75ffc01
+modified: 1693585664802
+created: 1693585664802
+url: "{{backend_host}}{{backend_v1}}/articles"
+name: Put Article
+description: ""
+method: PUT
+body: {}
+parameters: []
+headers: []
+authentication:
+  type: bearer
+  disabled: false
+  token: "{{jwt_token}}"
+  prefix: ""
+metaSortKey: -1693585664802
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

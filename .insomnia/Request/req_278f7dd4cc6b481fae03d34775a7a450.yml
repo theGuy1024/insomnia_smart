@@ -1,0 +1,30 @@
+_id: req_278f7dd4cc6b481fae03d34775a7a450
+type: Request
+parentId: fld_a372574f7e394bc6b6107090a925cf30
+modified: 1693585664784
+created: 1693585664784
+url: "{{backend_host}}{{backend_v1}}/logout"
+name: Signout
+description: ""
+method: POST
+body:
+  mimeType: ""
+  text: >-
+    {
+        "refresh_token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjEsImV4cCI6MTY5MjM3MzIwNH0.L8gLD9kKUhSbm0tv_QqIjKsTLpFcJda22JiA3aWT8Bk"
+    }
+parameters: []
+headers: []
+authentication:
+  type: bearer
+  disabled: false
+  token: "{{jwt_token}}"
+  prefix: ""
+metaSortKey: -1693585664784
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

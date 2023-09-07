@@ -1,0 +1,34 @@
+_id: req_03edbe5b38134b7d9ca4aed55cf9e454
+type: Request
+parentId: fld_5576a83a1e264da49982df875e1acd92
+modified: 1693585664788
+created: 1693585664788
+url: "{{backend_host}}{{backend_v1}}/users"
+name: GetUsers
+description: ""
+method: GET
+body: {}
+parameters:
+  - name: sort
+    value: id
+    disabled: false
+  - name: order
+    value: desc
+    disabled: false
+  - name: user_name
+    value: Admin
+    disabled: false
+headers: []
+authentication:
+  type: bearer
+  disabled: false
+  token: "{{jwt_token}}"
+  prefix: ""
+metaSortKey: -1693585664788
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

@@ -1,0 +1,26 @@
+_id: req_678d58c864a740c186d8b74c67fb4788
+type: Request
+parentId: fld_41e595dc49a143edb1675fdaa6e478b3
+modified: 1693585664796
+created: 1693585664796
+url: "{{backend_host}}{{backend_v1}}/forgot-password"
+name: ForgotPassword
+description: ""
+method: POST
+body:
+  mimeType: ""
+  text: |-
+    {
+        "email":"hcastellanos@speednet-wireless.com"
+    }
+parameters: []
+headers: []
+authentication: {}
+metaSortKey: -1693585664796
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

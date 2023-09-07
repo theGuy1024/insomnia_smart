@@ -1,0 +1,25 @@
+_id: req_ca0d8ceda69942e4b9353a7b90fedc88
+type: Request
+parentId: fld_bf678838026d4535bf189433e75ffc01
+modified: 1693585664800
+created: 1693585664800
+url: "{{backend_host}}{{backend_v1}}/articles/1"
+name: Get Article
+description: ""
+method: GET
+body: {}
+parameters: []
+headers: []
+authentication:
+  type: bearer
+  disabled: false
+  token: "{{jwt_token}}"
+  prefix: ""
+metaSortKey: -1693585664800
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

@@ -1,0 +1,29 @@
+_id: req_cb76bec0d91a4b6191a1ed7199853def
+type: Request
+parentId: fld_a372574f7e394bc6b6107090a925cf30
+modified: 1693591455072
+created: 1693585664781
+url: "{{backend_host}}{{backend_v1}}/login"
+name: Login
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+       "user_name":"Admin",
+        "password":"P@ssword1" 
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+authentication: {}
+metaSortKey: -1693585664781
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global
