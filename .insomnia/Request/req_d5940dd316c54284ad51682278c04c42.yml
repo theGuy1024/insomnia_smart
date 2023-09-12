@@ -1,15 +1,22 @@
-_id: req_a73c74b8af37484eb86316eadaac2988
+_id: req_d5940dd316c54284ad51682278c04c42
 type: Request
 parentId: fld_df422c87083e4aa5a692e10891200695
-modified: 1694529519354
-created: 1694115823445
-url: "{{backend_host}}{{backend_v1}}/warehouse-request/36"
-name: Get Warehouse Requests
+modified: 1694529476072
+created: 1694494277894
+url: "{{backend_host}}{{backend_v1}}/warehouse-request"
+name: Create Warehouse Request
 description: ""
-method: GET
+method: POST
 body:
   mimeType: application/json
-  text: ""
+  text: |-
+    {
+    	"note":"test_2",
+    	"requested_by":1,
+    	"target_id":2,
+    	"source_id":1,
+    	"required_at":"2023-09-15T15:04:05Z"
+    }
 parameters: []
 headers:
   - name: Content-Type
@@ -19,7 +26,7 @@ headers:
 authentication:
   type: bearer
   token: "{{jwt_token}}"
-metaSortKey: -1694115823445
+metaSortKey: -1694494277894
 isPrivate: false
 settingStoreCookies: true
 settingSendCookies: true

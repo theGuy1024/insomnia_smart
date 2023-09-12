@@ -1,13 +1,13 @@
 _id: env_8049d3591a6ba2f5c1ec7573238496384a5e6390
 type: Environment
 parentId: wrk_99f7b448b3bc421aa93ea627694dfc1d
-modified: 1694115624654
+modified: 1694529921221
 created: 1693585624528
 name: Base Environment
 data:
   backend_host: http://127.0.0.1:3001
   backend_v1: /api/v1
-  jwt_token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJ1c2VyX25hbWUiOiJBZG1pbiIsImVtYWlsIjoiaGNhc3RlbGxhbm9zQHNwZWVkbmV0LXdpcmVsZXNzLmNvbSIsImV4cCI6MTY5NDExNjQ3MX0.-k5LfTSm44OvntGzI0JrXbFljFLc5tpd59rCfbNZO9U
+  jwt_token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJ1c2VyX25hbWUiOiJBZG1pbiIsImVtYWlsIjoiaGNhc3RlbGxhbm9zQHNwZWVkbmV0LXdpcmVsZXNzLmNvbSIsImV4cCI6MTY5NDUyOTg4MH0.BBEKC_UL72S4jdHwEyIw2xWW3IemEXwxRdhsy8HCH5U
 dataPropertyOrder:
   "&":
     - backend_host
